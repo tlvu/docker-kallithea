@@ -15,7 +15,7 @@ RUN apt-get update && \
     mkdir /kallithea && \
     cd /kallithea && \
     mkdir -m 0777 config repos logs && \
-    hg clone https://kallithea-scm.org/repos/kallithea -u stable && \
+    hg clone https://bitbucket.org/domruf/kallithea -u bc89ca91867903a2baa5c3cc2e76b71ff7cebdc9 && \
     cd kallithea && \
     rm -r .hg && \
     pip install --upgrade pip setuptools && \
