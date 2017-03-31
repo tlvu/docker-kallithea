@@ -1,20 +1,23 @@
-Docker Kallithea
-================
+Docker Kallithea with Experimental Evolve support
+=================================================
 
 Image contains [kallithea](https://kallithea-scm.org/) source code management system.
 
+This is a fork from atnurgaliev/kallithea Docker image.  All credits goes to him.
+I am just borrowing his image to try the experimental Evolve support.
+
+There won't be a "latest" tag.  Each new build will have the build date as the tag so we can try different versions of Evolve support.
+
 Available tags:
 
-* [atnurgaliev/kallithea:latest](https://github.com/n-at/docker-kallithea/tree/master) - latest version from `stable` branch
-* [atnurgaliev/kallithea:0.3](https://github.com/n-at/docker-kallithea/tree/v0.3) - stable 0.3.2 version from PyPI
-* [atnurgaliev/kallithea:0.2](https://github.com/n-at/docker-kallithea/tree/v0.2) - stable 0.2 version from PyPI
+* [tlvu/kallithea-evolve:BUILD_DATE](https://github.com/tlvu/docker-kallithea/tree/master) - latest version from `domruf experimental` branch
 
 Usage
 -----
 
 Run a container with:
 
-    $ docker run -d -p 8085:80 atnurgaliev/kallithea
+    $ docker run -d -p 8085:80 tlvu/kallithea-evolve:BUILD_DATE
 
 You can specify some environment variables:
 
@@ -44,4 +47,4 @@ Example of container with mounted volumes and new admin password running on port
         -e KALLITHEA_ADMIN_PASS=secret \
         -v /opt/kallithea/config:/kallithea/config \
         -v /opt/kallithea/repos:/kallithea/repos \
-        atnurgaliev/kallithea
+        tlvu/kallithea-evolve:BUILD_DATE
