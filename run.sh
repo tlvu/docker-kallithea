@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 KALLITHEA_ADMIN_USER=${KALLITHEA_ADMIN_USER:-"admin"}
 KALLITHEA_ADMIN_PASS=${KALLITHEA_ADMIN_PASS:-"admin"}
