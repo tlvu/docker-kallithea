@@ -8,17 +8,17 @@ cd /kallithea/config
 
 if [ ! -e kallithea.ini ]; then
     echo "Creating configuration file..."
-    paster make-config Kallithea kallithea.ini
+    gearbox make-config kallithea.ini
 
     #external database
     if [ -n "$KALLITHEA_EXTERNAL_DB" ]; then
         echo "Setting db connection string..."
         DB_ESC=$(echo "$KALLITHEA_EXTERNAL_DB" | sed -e 's/[\/&]/\\&/g')
-        sed -i "s/^sqlalchemy\.db1\.url = .*/sqlalchemy.db1.url = ${DB_ESC}/1" kallithea.ini
+        sed -i "s/^sqlalchemy\.url = .*/sqlalchemy.url = ${DB_ESC}/1" kallithea.ini
     fi
 
     echo "Creating database..."
-    paster setup-db kallithea.ini \
+    gearbox setup-db -c kallithea.ini \
         --user=${KALLITHEA_ADMIN_USER} \
         --password=${KALLITHEA_ADMIN_PASS} \
         --email=${KALLITHEA_ADMIN_MAIL} \
@@ -41,5 +41,5 @@ if [ ! -e kallithea.ini ]; then
     fi
 fi
 
-gearbox serve --log-file=/kallithea/logs/paster.log -c kallithea.ini &
+gearbox serve --log-file=/kallithea/logs/kallithea.log -c kallithea.ini &
 nginx -g "daemon off;"
