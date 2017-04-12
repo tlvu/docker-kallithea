@@ -46,8 +46,9 @@ Available volumes:
 
 Example of container with mounted volumes and new admin password running on port 8085:
  
-    $ docker run -d -p 8085:80 \
+    $ docker run -d -p 8085:5000 \
         -e KALLITHEA_ADMIN_PASS=secret \
         -v /opt/kallithea/config:/kallithea/config \
         -v /opt/kallithea/repos:/kallithea/repos \
+        -v /opt/kallithea/logs:/kallithea/logs \
         tlvu/kallithea-evolve:BUILD_DATE_TAG
