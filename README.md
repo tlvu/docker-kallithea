@@ -20,7 +20,7 @@ Usage
 
 Run a container with:
 
-    $ docker run -d -p 8085:80 tlvu/kallithea-evolve:BUILD_DATE_TAG
+    $ docker run -d -p 8085:5000 tlvu/kallithea-evolve:BUILD_DATE_TAG
 
 You can specify some environment variables:
 
