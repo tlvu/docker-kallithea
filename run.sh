@@ -41,5 +41,5 @@ if [ ! -e kallithea.ini ]; then
     fi
 fi
 
-paster serve --log-file=/kallithea/logs/paster.log kallithea.ini &
+gearbox serve --log-file=/kallithea/logs/paster.log -c kallithea.ini &
 nginx -g "daemon off;"

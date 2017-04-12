@@ -5,7 +5,7 @@ Image contains [kallithea](https://kallithea-scm.org/) source code management sy
 
 This is a fork from atnurgaliev/kallithea Docker image.  All credits goes to him.
 I am just borrowing his image to try the experimental Evolve support from
-[domruf](https://bitbucket.org/domruf/kallithea)
+[domruf](https://bitbucket.org/domruf/kallithea).
 
 There won't be a "latest" tag.  Each new build will have the build date as the tag so we can try different versions of Evolve support.
 
