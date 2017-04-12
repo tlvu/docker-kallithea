@@ -25,6 +25,7 @@ RUN apt-get update && \
     \
     pip install mysql-python && \
     pip install psycopg2 && \
+    pip install hg-evolve && \
     \
     apt-get purge --auto-remove -y python-dev software-properties-common && \
     \
