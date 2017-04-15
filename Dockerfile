@@ -34,9 +34,9 @@ RUN apt-get update && \
 RUN apt-get install -y wget
 
 RUN cd /kallithea/kallithea; \
-    wget https://bitbucket.org/kiilerix/kallithea/commits/a7b5cd25f5db028163d447077bfc47e318cbe2ec/raw/ -q -O - | patch -p1 -N;
-    wget https://bitbucket.org/kiilerix/kallithea/commits/5ec4d56faaf8240d5a7e4f6bf0055c78c4fb0250/raw/ -q -O - | patch -p1 -N;
-    wget https://bitbucket.org/kiilerix/kallithea/commits/7bb325660edc97fbd10ef63f4e57325153063684/raw/ -q -O - | patch -p1 -N;
+    wget https://bitbucket.org/kiilerix/kallithea/commits/a7b5cd25f5db028163d447077bfc47e318cbe2ec/raw/ -q -O - | patch -p1 -N; \
+    wget https://bitbucket.org/kiilerix/kallithea/commits/5ec4d56faaf8240d5a7e4f6bf0055c78c4fb0250/raw/ -q -O - | patch -p1 -N; \
+    wget https://bitbucket.org/kiilerix/kallithea/commits/7bb325660edc97fbd10ef63f4e57325153063684/raw/ -q -O - | patch -p1 -N; \
     wget https://bitbucket.org/kiilerix/kallithea/commits/a02455783d7824ec8479a260f9dbcb9f5a6c2209/raw/ -q -O - | patch -p1 -N
 
 ADD kallithea_vhost /etc/nginx/sites-enabled/kallithea_vhost
