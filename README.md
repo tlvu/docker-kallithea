@@ -11,6 +11,7 @@ There won't be a "latest" tag.  Each new build will have the build date as the t
 
 Available tags:
 
+* tlvu/kallithea-evolve:2017-04-14 from [PR #314](https://bitbucket.org/conservancy/kallithea/pull-requests/314) + [PR #318](https://bitbucket.org/conservancy/kallithea/pull-requests/318)
 * tlvu/kallithea-evolve:2017-04-12 from [PR #314](https://bitbucket.org/conservancy/kallithea/pull-requests/314) + hg-evolve pre-installed
 * tlvu/kallithea-evolve:2017-04-11 from [PR #314](https://bitbucket.org/conservancy/kallithea/pull-requests/314)
 * tlvu/kallithea-evolve:2017-03-31 from [PR #305](https://bitbucket.org/conservancy/kallithea/pull-requests/305)
